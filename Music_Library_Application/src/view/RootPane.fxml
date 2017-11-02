@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- //Created by Steven Benmoha and Colin Ackerley -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.2236180904522613" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LibraryController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="105.0" prefWidth="598.0">
+         <children>
+            <Button fx:id="Edit" alignment="CENTER" layoutX="218.0" layoutY="23.0" mnemonicParsing="false" onAction="#edit" prefHeight="45.0" prefWidth="162.0" text="Edit Song Info">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="Add" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="22.0" mnemonicParsing="false" onAction="#add" prefHeight="47.0" prefWidth="162.0" text="Add Song">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="Delete" alignment="CENTER" layoutX="415.0" layoutY="23.0" mnemonicParsing="false" onAction="#delete" prefHeight="45.0" prefWidth="162.0" text="Delete Song" textFill="#ae1616">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+    <AnchorPane fx:id="LibraryController" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Text layoutX="405.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <ListView fx:id="mainList" prefHeight="306.0" prefWidth="378.0" />
+            <Separator layoutX="375.0" orientation="VERTICAL" prefHeight="306.0" prefWidth="5.0" />
+            <Text disable="true" layoutX="458.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Song Title">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="449.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artist Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="405.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Album Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="537.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <TextField fx:id="SongTitle" layoutX="412.0" layoutY="42.0" promptText="Song Title" />
+            <TextField fx:id="ArtistName" layoutX="409.0" layoutY="128.0" promptText="Artist Name" />
+            <TextField fx:id="AlbumName" layoutX="388.0" layoutY="201.0" prefHeight="25.0" prefWidth="109.0" promptText="Album Name" />
+            <TextField fx:id="Year" layoutX="513.0" layoutY="201.0" prefHeight="25.0" prefWidth="74.0" promptText="Year" />
+            <Button fx:id="Save" onAction="#save" layoutX="430.0" layoutY="249.0" mnemonicParsing="false" text="Add/Save Changes">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
